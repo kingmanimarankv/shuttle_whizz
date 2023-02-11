@@ -11,8 +11,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            HeroSection(),
+          children:  [
+            const HeroSection(),
             PlayerPreference(),
           ],
         ),
