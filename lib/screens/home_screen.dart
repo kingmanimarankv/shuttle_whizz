@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shuttle_whizz/screens/widgets/hero_section.dart';
-import 'package:shuttle_whizz/screens/widgets/player_perference.dart';
+import 'package:shuttle_whizz/screens/widgets/preference_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children:  [
             const HeroSection(),
-            PlayerPreference(),
+            PreferenceSection(),
           ],
         ),
       ),
