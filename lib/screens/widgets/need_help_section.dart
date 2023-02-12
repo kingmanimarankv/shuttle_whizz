@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
 
 import '../../common/theme/color_constants.dart';
-import '../../common/widgets/needHelpButton.dart';
+import '../../common/widgets/outline_button.dart';
 
 class HelpSection extends StatelessWidget {
   const HelpSection({super.key});
