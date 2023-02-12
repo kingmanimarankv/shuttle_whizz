@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shuttle_whizz/common/theme/color_constants.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
 
-class NeedHelpButton extends StatelessWidget {
-  const NeedHelpButton({super.key});
+class OutlineButton extends StatelessWidget {
+  const OutlineButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +12,13 @@ class NeedHelpButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       width: 250,
       decoration: BoxDecoration(
-        color: ColorConstants.needHelpColor,
+        color: ColorConstants.violetColor,
         borderRadius: BorderRadius.circular(50),
         border:Border.all(color:ColorConstants.whiteColor),
       ),
       child: Center(
         child: Text(
-          StringConstants.needHelpButtonText.toUpperCase(),
+          StringConstants.contactUs.toUpperCase(),
           style: GoogleFonts.lato(
             color:ColorConstants.whiteColor,
             fontWeight: FontWeight.w600,
