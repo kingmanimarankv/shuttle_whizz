@@ -4,6 +4,8 @@ import 'package:shuttle_whizz/common/widgets/button.dart';
 import 'package:shuttle_whizz/constants/image_constants.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
 
+import '../../common/theme/text_theme.dart';
+
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
 
@@ -26,10 +28,8 @@ class HeroSection extends StatelessWidget {
               children: [
                 Text(
                   StringConstants.welcome,
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 45,
-                  ),
+                 style:TextThemeConstants.headingStyle,
+                  
                 ),
                 const SizedBox(
                   height: 10,
@@ -37,10 +37,7 @@ class HeroSection extends StatelessWidget {
                 Text(
                   StringConstants.heroSectionSubText,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 18,
-                  ),
+                  style: TextThemeConstants.subTitleStyle
                 ),
                 const SizedBox(
                   height: 20,
