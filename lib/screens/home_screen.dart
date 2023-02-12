@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shuttle_whizz/screens/widgets/hero_section.dart';
-import 'package:shuttle_whizz/screens/widgets/need_help_section.dart';
+import 'package:shuttle_whizz/screens/widgets/help_section.dart';
 import 'package:shuttle_whizz/screens/widgets/preference_section.dart';
 
 class HomeScreen extends StatelessWidget {
