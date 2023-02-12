@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shuttle_whizz/screens/widgets/hero_section.dart';
+import 'package:shuttle_whizz/screens/widgets/need_help_section.dart';
 import 'package:shuttle_whizz/screens/widgets/preference_section.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,6 +15,8 @@ class HomeScreen extends StatelessWidget {
           children:  [
             const HeroSection(),
             PreferenceSection(),
+            const HelpSection(),
+
           ],
         ),
       ),

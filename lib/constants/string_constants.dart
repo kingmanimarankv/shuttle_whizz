@@ -12,5 +12,8 @@ class StringConstants {
   static const allAgesSubTitle ="We have suitable training programs from kids to adult. Enroll now to fast-track your badminton coaching";
   static const membershipsSubTitle ="We offer different membership programs to enhance the hassle free experinence in playing.";
   static const allSkillLevelsSubTitle = "We have suitable training programs from begginner level to Professional level to excel in the game";
+ static const needHelp ="Need help?";
+ static const needHelpSubTitle ="We'd love to help you";
+ static const contactUs ="Contact us";
  
 }
