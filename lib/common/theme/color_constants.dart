@@ -7,4 +7,6 @@ class ColorConstants {
   static const violetColor = Color(0xFF090233);
   static const aliceBlueColor = Color(0xFFF3F7FA);
 
+
+  static const darkSalmonColor = Color(0xFF9377EE);
 }

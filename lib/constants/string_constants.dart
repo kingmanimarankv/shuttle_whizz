@@ -18,4 +18,23 @@ class StringConstants {
  static const playForward ="Play it Forward";
  static const playForwardSubTitle ="Book your slots in the best class courts from the club now";
 static const availableFor ="Available For ";
+ static const discountTitle ="Up to 50% Discount";
+ static const discountSubTitle ="on your Gold Membership";
+ static const membershipCode ="USE CODE:BURLIGTON45623";
+ //Court-booking_details
+ static const courtName ="Court-1";
+ static const courtLocation ="Ontario, LM0479";
+ static const courtDescriptionTitle ="About Venue";
+ static const courtDescription ='''
+ 1.Non marking shoes compulsory for badminton
+ 2.Non marking shoes compulsory for badminton
+ 3.Non marking shoes compulsory for badminton
+ 4.Non marking shoes compulsory for badminton
+ 5.Non marking shoes compulsory for badminton
+ 6.Non marking shoes compulsory for badminton
+
+ ''';
+ static const availableDate ="Availabel Dates";
+ static const availableSlots ="Available Slots";
+ 
 }
