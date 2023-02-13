@@ -15,5 +15,7 @@ class StringConstants {
  static const needHelp ="Need help?";
  static const needHelpSubTitle ="We'd love to help you";
  static const contactUs ="Contact us";
+ static const memberTitle ="Become a member";
+ static const memberSubTitle ="Choose your membership and get exciting benefits.";
  
 }
