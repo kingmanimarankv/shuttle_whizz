@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../common/theme/text_theme.dart';
 import '../../constants/image_constants.dart';
 import '../../constants/string_constants.dart';
 
@@ -21,10 +22,7 @@ class PreferenceSection extends StatelessWidget {
       child: Column(
         children: [
           Text(StringConstants.preferenceSectionHeading,
-              style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w900,
-                fontSize: 50,
-              )),
+              style: TextThemeConstants.headingStyle),
           const SizedBox(height: 56),
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
