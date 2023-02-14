@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
 
 import '../../common/theme/color_constants.dart';
@@ -14,16 +13,33 @@ class HelpSection extends StatelessWidget {
     return Container(
       color: ColorConstants.violetColor,
       width: double.infinity,
-      height: 359,
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(StringConstants.needHelp,
-            style: TextThemeConstants.headingStyle.copyWith(color:ColorConstants.whiteColor)),
-                const SizedBox(height: 8,),
-        Text(StringConstants.needHelpSubTitle,
-            style: TextThemeConstants.subTitleStyle.copyWith(color:ColorConstants.whiteColor)),
-                const SizedBox(height:39),
-        const OutlineButton(),
-      ]),
+      padding: const EdgeInsets.symmetric(vertical: 50),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            StringConstants.needHelp,
+            style: TextThemeConstants.headingStyle.copyWith(
+              color: ColorConstants.whiteColor,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            StringConstants.needHelpSubTitle,
+            style: TextThemeConstants.subTitleStyle.copyWith(
+              color: ColorConstants.whiteColor,
+            ),
+          ),
+          const SizedBox(height: 50),
+          const OutlineButton(
+            buttonText: StringConstants.contactUs,
+            borderColor: ColorConstants.whiteColor,
+            textColor: ColorConstants.whiteColor,
+          ),
+        ],
+      ),
     );
   }
 }

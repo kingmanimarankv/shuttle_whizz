@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shuttle_whizz/screens/widgets/hero_section.dart';
-import 'package:shuttle_whizz/screens/widgets/help_section.dart';
 
-import 'package:shuttle_whizz/screens/widgets/play_it_forward_section.dart';
-import 'package:shuttle_whizz/screens/widgets/preference_section.dart';
-
-import '../common/theme/color_constants.dart';
+import 'widgets/help_section.dart';
+import 'widgets/hero_section.dart';
+import 'widgets/play_it_forward_section.dart';
+import 'widgets/preference_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,15 +14,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
-         
-          children:  [
+          children: [
             const HeroSection(),
-             PlayItForwardSection(),
+            PlayItForwardSection(),
             PreferenceSection(),
-            
             const HelpSection(),
-            
-
           ],
         ),
       ),

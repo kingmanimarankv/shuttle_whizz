@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:shuttle_whizz/common/theme/color_constants.dart';
-import 'package:shuttle_whizz/constants/string_constants.dart';
+
+import '../theme/text_theme.dart';
 
 class OutlineButton extends StatelessWidget {
-  const OutlineButton({super.key});
+  final String buttonText;
+  final Color borderColor;
+  final Color textColor;
+
+  const OutlineButton({
+    required this.buttonText,
+    required this.borderColor,
+    required this.textColor,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +20,16 @@ class OutlineButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       width: 250,
       decoration: BoxDecoration(
-        color: ColorConstants.violetColor,
         borderRadius: BorderRadius.circular(50),
-        border:Border.all(color:ColorConstants.whiteColor),
+        border: Border.all(
+          color: borderColor,
+        ),
       ),
       child: Center(
         child: Text(
-          StringConstants.contactUs.toUpperCase(),
-          style: GoogleFonts.lato(
-            color:ColorConstants.whiteColor,
-            fontWeight: FontWeight.w600,
-            fontSize: 12,
+          buttonText.toUpperCase(),
+          style: TextThemeConstants.buttonTextStyle.copyWith(
+            color: textColor,
           ),
         ),
       ),
