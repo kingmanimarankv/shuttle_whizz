@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../common/theme/color_constants.dart';
 import '../../common/theme/text_theme.dart';
@@ -8,7 +7,7 @@ import '../../constants/string_constants.dart';
 
 class PlayItForwardSection extends StatelessWidget {
   PlayItForwardSection({super.key});
-  List courts = [
+  final List courts = [
     {
       "court_name": "Court-1",
       "court_address": "Something",
@@ -35,17 +34,19 @@ class PlayItForwardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 1435,
+      padding: const EdgeInsets.symmetric(vertical: 50),
       color: ColorConstants.aliceBlueColor,
       child: Column(children: [
         Text(
           StringConstants.playForward,
           style: TextThemeConstants.headingStyle,
         ),
-        Text(StringConstants.playForwardSubTitle,
-            style: TextThemeConstants.subTitleStyle),
-        SizedBox(
-          height: 42,
+        Text(
+          StringConstants.playForwardSubTitle,
+          style: TextThemeConstants.subTitleStyle,
+        ),
+        const SizedBox(
+          height: 40,
         ),
         SizedBox(
           height: 200,
@@ -55,63 +56,84 @@ class PlayItForwardSection extends StatelessWidget {
               itemCount: courts.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => Container(
-                  width: 241,
-                  height: 196,
-                  padding: EdgeInsets.all(13),
-                  margin:EdgeInsets.symmetric(horizontal: 14),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                        color: ColorConstants.blackColor.withOpacity(0.25)),
-                  ),
-                  child: Column(
-                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                width: 250,
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.symmetric(horizontal: 5),
+                decoration: BoxDecoration(
+                  color: ColorConstants.whiteColor,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: ColorConstants.blackColor.withOpacity(0.5),
+                      blurRadius: 5,
+                      spreadRadius: 0.2,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment:CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 80,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(
-                                      courts[index]['court_image'],
-                                    ),
-                                  )),
+                        Container(
+                          height: 80,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                courts[index]['court_image'],
+                              ),
                             ),
-                            SizedBox(height: 5,),
-                            Text(courts[index]['court_name'],
-                                style: TextThemeConstants.subHeadingStyle),
-                            Text(courts[index]['court_address'],
-                                style: TextThemeConstants.bodyTextStyle1),
-                          ],
+                          ),
                         ),
-                        
-                        RichText(
-                          text: TextSpan(
-                              style: TextThemeConstants.bodyTextStyle1,
-                              children: [
-                                TextSpan(text: StringConstants.availableFor),
-                                TextSpan(
-                                    text: courts[index]['available_dates'],
-                                    style: TextThemeConstants.bodyTextStyle1
-                                        .copyWith(fontWeight: FontWeight.w700))
-                              ]),
+                        const SizedBox(
+                          height: 5,
                         ),
-                        //Text('Available for 25,26,27 February 2023',style: TextThemeConstants.bodyTextStyle1,),
-                      ])),
+                        Text(
+                          courts[index]['court_name'],
+                          style: TextThemeConstants.subHeadingStyle,
+                        ),
+                        Text(
+                          courts[index]['court_address'],
+                          style: TextThemeConstants.bodyTextStyle1,
+                        ),
+                      ],
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        style: TextThemeConstants.bodyTextStyle1,
+                        children: [
+                          const TextSpan(
+                            text: StringConstants.availableFor,
+                          ),
+                          TextSpan(
+                            text: courts[index]['available_dates'],
+                            style: TextThemeConstants.bodyTextStyle1
+                                .copyWith(fontWeight: FontWeight.w700),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
-        SizedBox(height: 29,),
-      OutlineButton(),
+        const SizedBox(
+          height: 29,
+        ),
+        OutlineButton(
+          buttonText: StringConstants.viewAllCourts,
+          borderColor: ColorConstants.blackColor.withOpacity(0.25),
+          textColor: ColorConstants.blackColor,
+        ),
       ]),
-
     );
   }
 }
