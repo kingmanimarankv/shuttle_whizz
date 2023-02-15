@@ -28,17 +28,14 @@ class HeroSection extends StatelessWidget {
               children: [
                 Text(
                   StringConstants.welcome,
-                 style:TextThemeConstants.headingStyle,
-                  
+                  style: TextThemeConstants.headingStyle,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
-                  StringConstants.heroSectionSubText,
-                  textAlign: TextAlign.center,
-                  style: TextThemeConstants.subTitleStyle
-                ),
+                Text(StringConstants.heroSectionSubText,
+                    textAlign: TextAlign.center,
+                    style: TextThemeConstants.subTitleStyle),
                 const SizedBox(
                   height: 20,
                 ),
