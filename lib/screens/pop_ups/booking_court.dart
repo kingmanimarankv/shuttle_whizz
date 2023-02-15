@@ -5,7 +5,7 @@ import '../../constants/image_constants.dart';
 import '../../constants/string_constants.dart';
 
 class BookingCourt extends StatelessWidget {
-  const BookingCourt({super.key});
+  BookingCourt({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +15,29 @@ class BookingCourt extends StatelessWidget {
         width: 617,
         height: 709,
         child: Column(
-          children: const [
+          children: [
             Image(
               image: AssetImage(ImageConstants.badmintonGirls),
             ),
             SizedBox(
               height: 18,
             ),
-            Text(StringConstants.courtName),
-            
-            Text(StringConstants.courtLocation),
-            SizedBox()
-            
+            Container(
+
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(StringConstants.courtName),
+                Text(StringConstants.courtLocation),
+                Container(
+                    child: Column(
+                  children: [
+                    Text(StringConstants.courtDescriptionTitle),
+                    Text(StringConstants.courtDescription),
+                  ],
+                )),
+              ],
+            )),
           ],
         ),
       ),
