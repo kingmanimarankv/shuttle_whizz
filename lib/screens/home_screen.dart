@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shuttle_whizz/common/theme/color_constants.dart';
-import 'package:shuttle_whizz/common/theme/text_theme.dart';
-import 'package:shuttle_whizz/constants/image_constants.dart';
-import 'package:shuttle_whizz/constants/string_constants.dart';
 import 'package:shuttle_whizz/screens/widgets/nav_bar_section.dart';
 
 import 'widgets/help_section.dart';
 import 'widgets/hero_section.dart';
 import 'widgets/play_it_forward_section.dart';
 import 'widgets/preference_section.dart';
+import 'package:shuttle_whizz/screens/widgets/member_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,6 +21,7 @@ class HomeScreen extends StatelessWidget {
             const HeroSection(),
             PlayItForwardSection(),
             PreferenceSection(),
+            Member(),
             const HelpSection(),
           ],
         ),
