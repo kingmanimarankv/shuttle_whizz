@@ -47,11 +47,11 @@ class PlayItForwardSection extends StatelessWidget {
           style: TextThemeConstants.subTitleStyle,
         ),
         const SizedBox(
-          height: 40,
+          height: 50,
         ),
-        SizedBox(
-          height: 200,
-          child: Center(
+        Center(
+          child: SizedBox(
+            height: 200,
             child: ListView.builder(
               shrinkWrap: true,
               itemCount: courts.length,
@@ -67,7 +67,7 @@ class PlayItForwardSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: ColorConstants.blackColor.withOpacity(0.5),
+                        color: ColorConstants.blackColor.withOpacity(0.2),
                         blurRadius: 5,
                         spreadRadius: 0.2,
                       ),

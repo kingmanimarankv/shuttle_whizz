@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             const HeroSection(),
             PlayItForwardSection(),
             PreferenceSection(),
-            Member(),
+            MembershipSection(),
             const HelpSection(),
           ],
         ),

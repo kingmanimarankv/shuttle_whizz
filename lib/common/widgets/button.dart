@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shuttle_whizz/common/theme/color_constants.dart';
-import 'package:shuttle_whizz/constants/string_constants.dart';
 
 class Button extends StatelessWidget {
-  const Button({super.key});
+  const Button({
+    required this.buttonText,
+    super.key,
+  });
+
+  final String buttonText;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class Button extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            StringConstants.bookNow.toUpperCase(),
+            buttonText,
             style: GoogleFonts.lato(
               fontWeight: FontWeight.w600,
               fontSize: 12,

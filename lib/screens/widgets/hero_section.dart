@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shuttle_whizz/common/widgets/button.dart';
 import 'package:shuttle_whizz/constants/image_constants.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
@@ -40,7 +39,9 @@ class HeroSection extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Button(),
+                Button(
+                  buttonText: StringConstants.bookNow.toUpperCase(),
+                ),
               ],
             ),
           ),

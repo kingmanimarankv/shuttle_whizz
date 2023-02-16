@@ -35,6 +35,7 @@ class NavBarSection extends StatelessWidget {
                     Text(
                       StringConstants.shuttleWhizzClub,
                       style: TextThemeConstants.headingStyle.copyWith(
+                        fontWeight: FontWeight.w400,
                         fontSize: 20,
                         color: ColorConstants.whiteColor,
                       ),

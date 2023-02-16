@@ -32,4 +32,6 @@ class StringConstants {
       "3042 Tim Dobbie Dr, Burlington, ON, Canada, Ontario";
   static const bookings = "Bookings";
   static const account = "Account";
+  static const perMonth = "per month";
+  static const buyNow = "BUY NOW";
 }
