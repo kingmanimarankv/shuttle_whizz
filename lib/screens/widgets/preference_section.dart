@@ -16,6 +16,7 @@ class PreferenceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 50),
       color: Colors.white,
       child: Column(
@@ -23,14 +24,17 @@ class PreferenceSection extends StatelessWidget {
           Text(
             StringConstants.preferenceSectionHeading,
             style: TextThemeConstants.headingStyle,
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 50),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
             children: content.entries
                 .map(
                   (e) => Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     width: 150,
                     child: Expanded(
                       child: Column(

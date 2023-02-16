@@ -8,19 +8,22 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      width: 250,
-      decoration: BoxDecoration(
-        color: ColorConstants.orangeColor,
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: Center(
-        child: Text(
-          StringConstants.bookNow.toUpperCase(),
-          style: GoogleFonts.lato(
-            fontWeight: FontWeight.w600,
-            fontSize: 12,
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        width: 250,
+        decoration: BoxDecoration(
+          color: ColorConstants.orangeColor,
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Center(
+          child: Text(
+            StringConstants.bookNow.toUpperCase(),
+            style: GoogleFonts.lato(
+              fontWeight: FontWeight.w600,
+              fontSize: 12,
+            ),
           ),
         ),
       ),

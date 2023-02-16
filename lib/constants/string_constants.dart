@@ -1,7 +1,7 @@
 class StringConstants {
-  static const welcome = "Welcome!";
+  static const welcome = "Welcome";
   static const heroSectionSubText =
-      "Time spent playing badminton in Shuttle Whizz Badminton Club\nis never wasted.";
+      "Time spent playing badminton in Shuttle Whizz Badminton Club is never wasted.";
   static const bookNow = "Book Now";
   static const preferenceSectionHeading = "Here is why more players prefer us?";
   static const proCoaching = "Pro Coaching";

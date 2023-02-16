@@ -10,22 +10,22 @@ class PlayItForwardSection extends StatelessWidget {
   final List courts = [
     {
       "court_name": "Court-1",
-      "court_address": "Something",
+      "court_address": "Burlington, ON L7M0M4",
+      "available_dates": "24, 25, 26 February 2023",
+      "court_image":
+          'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
+    },
+    {
+      "court_name": "Court-2",
+      "court_address": "Burlington, ON L7M0M4",
       "available_dates": "24 February 2023",
       "court_image":
           'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
     },
     {
-      "court_name": "Court-1",
-      "court_address": "Something",
-      "available_dates": "24 February 2023",
-      "court_image":
-          'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
-    },
-    {
-      "court_name": "Court-1",
-      "court_address": "Something",
-      "available_dates": "24 February 2023",
+      "court_name": "Court-3",
+      "court_address": "Burlington, ON L7M0M4",
+      "available_dates": "25, 26 February 2023",
       "court_image":
           'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
     }
@@ -40,6 +40,7 @@ class PlayItForwardSection extends StatelessWidget {
         Text(
           StringConstants.playForward,
           style: TextThemeConstants.headingStyle,
+          textAlign: TextAlign.center,
         ),
         Text(
           StringConstants.playForwardSubTitle,
@@ -55,71 +56,78 @@ class PlayItForwardSection extends StatelessWidget {
               shrinkWrap: true,
               itemCount: courts.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => Container(
-                width: 250,
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                decoration: BoxDecoration(
-                  color: ColorConstants.whiteColor,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: ColorConstants.blackColor.withOpacity(0.5),
-                      blurRadius: 5,
-                      spreadRadius: 0.2,
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 80,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                courts[index]['court_image'],
+              itemBuilder: (context, index) => InkWell(
+                onTap: () {},
+                child: Container(
+                  width: 220,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    color: ColorConstants.whiteColor,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: ColorConstants.blackColor.withOpacity(0.5),
+                        blurRadius: 5,
+                        spreadRadius: 0.2,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 80,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                  courts[index]['court_image'],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          courts[index]['court_name'],
-                          style: TextThemeConstants.subHeadingStyle,
-                        ),
-                        Text(
-                          courts[index]['court_address'],
-                          style: TextThemeConstants.bodyTextStyle1,
-                        ),
-                      ],
-                    ),
-                    RichText(
-                      text: TextSpan(
-                        style: TextThemeConstants.bodyTextStyle1,
-                        children: [
-                          const TextSpan(
-                            text: StringConstants.availableFor,
+                          const SizedBox(
+                            height: 15,
                           ),
-                          TextSpan(
-                            text: courts[index]['available_dates'],
-                            style: TextThemeConstants.bodyTextStyle1
-                                .copyWith(fontWeight: FontWeight.w700),
+                          Text(
+                            courts[index]['court_name'],
+                            style: TextThemeConstants.subHeadingStyle,
+                          ),
+                          Text(
+                            courts[index]['court_address'],
+                            style: TextThemeConstants.bodyTextStyle1,
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      Expanded(child: Container()),
+                      RichText(
+                        text: TextSpan(
+                          style: TextThemeConstants.bodyTextStyle1,
+                          children: [
+                            const TextSpan(
+                              text: StringConstants.availableFor,
+                            ),
+                            TextSpan(
+                              text: courts[index]['available_dates'],
+                              style: TextThemeConstants.bodyTextStyle1
+                                  .copyWith(fontWeight: FontWeight.w700),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

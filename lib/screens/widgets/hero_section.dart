@@ -29,6 +29,7 @@ class HeroSection extends StatelessWidget {
                 Text(
                   StringConstants.welcome,
                   style: TextThemeConstants.headingStyle,
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(
                   height: 10,

@@ -22,15 +22,14 @@ class HelpSection extends StatelessWidget {
             style: TextThemeConstants.headingStyle.copyWith(
               color: ColorConstants.whiteColor,
             ),
-          ),
-          const SizedBox(
-            height: 10,
+            textAlign: TextAlign.center,
           ),
           Text(
             StringConstants.needHelpSubTitle,
             style: TextThemeConstants.subTitleStyle.copyWith(
               color: ColorConstants.whiteColor,
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 50),
           const OutlineButton(
