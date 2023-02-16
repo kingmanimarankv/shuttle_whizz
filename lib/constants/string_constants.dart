@@ -24,4 +24,9 @@ class StringConstants {
       "Book your slots in the best class courts from the club now";
   static const availableFor = "Available For ";
   static const viewAllCourts = "View All Courts";
+  static const shuttleWhizzClub = "Shuttle Whizz Badminton Club";
+  static const clubAddress =
+      "3042 Tim Dobbie Dr, Burlington, ON, Canada, Ontario";
+  static const bookings = "Bookings";
+  static const account = "Account";
 }
