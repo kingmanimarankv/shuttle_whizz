@@ -37,5 +37,6 @@ static const availableFor ="Available For ";
  ''';
  static const availableDate ="Availabel Dates";
  static const availableSlots ="Available Slots";
- 
+ static const bookingDate ="23 January 2023";
+ static const bookingTime = "11 AM - 12 AM";
 }

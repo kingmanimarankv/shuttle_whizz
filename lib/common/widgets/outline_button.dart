@@ -23,6 +23,7 @@ class OutlineButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
         border: Border.all(
           color: borderColor,
+          
         ),
       ),
       child: Center(
