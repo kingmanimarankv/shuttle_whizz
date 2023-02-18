@@ -118,7 +118,7 @@ class NavBarSection extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                content: Login(),
+                                content: const Login(),
                               );
                             },
                           );

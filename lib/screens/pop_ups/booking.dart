@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/theme/color_constants.dart';
 import '../../common/theme/text_theme.dart';
-import '../../common/widgets/bookings_info.dart';
 import '../../constants/image_constants.dart';
-import '../../constants/string_constants.dart';
 
 class Bookings extends StatelessWidget {
   const Bookings({super.key});
@@ -73,10 +71,22 @@ class Bookings extends StatelessWidget {
                       Container(
                         height: 70,
                         decoration: const BoxDecoration(
-                          color: ColorConstants.darkSalmon,
                           borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              topRight: Radius.circular(20)),
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                          ),
+                          image: DecorationImage(
+                            fit: BoxFit.fitWidth,
+                            repeat: ImageRepeat.repeatY,
+                            opacity: 0.2,
+                            colorFilter: ColorFilter.mode(
+                              ColorConstants.whiteColor,
+                              BlendMode.color,
+                            ),
+                            image: AssetImage(
+                              ImageConstants.pattern,
+                            ),
+                          ),
                         ),
                       ),
                       Container(

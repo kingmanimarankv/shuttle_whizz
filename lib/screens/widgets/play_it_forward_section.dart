@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shuttle_whizz/screens/pop_ups/booking_court.dart';
 
 import '../../common/theme/color_constants.dart';
 import '../../common/theme/text_theme.dart';
-import '../../common/widgets/outline_button.dart';
 import '../../constants/string_constants.dart';
 
 class PlayItForwardSection extends StatelessWidget {
@@ -20,14 +20,14 @@ class PlayItForwardSection extends StatelessWidget {
       "court_address": "Burlington, ON L7M0M4",
       "available_dates": "24 February 2023",
       "court_image":
-          'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
+          'https://5.imimg.com/data5/RI/KP/QW/SELLER-2751211/lndoor-badminton-court-flooring-1000x1000.jpeg',
     },
     {
       "court_name": "Court-3",
       "court_address": "Burlington, ON L7M0M4",
       "available_dates": "25, 26 February 2023",
       "court_image":
-          'https://5.imimg.com/data5/LR/GG/QH/SELLER-8295887/synthetic-badminton-shuttle-court-flooring-500x500.jpg',
+          'https://content3.jdmagicbox.com/comp/def_content/badminton-courts/6-badminton-courts-4-6f9mp.jpg?clr=1d4949',
     }
   ];
 
@@ -36,112 +36,130 @@ class PlayItForwardSection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 50),
       color: ColorConstants.aliceBlueColor,
-      child: Column(children: [
-        Text(
-          StringConstants.playForward,
-          style: TextThemeConstants.headingStyle,
-          textAlign: TextAlign.center,
-        ),
-        Text(
-          StringConstants.playForwardSubTitle,
-          style: TextThemeConstants.subTitleStyle,
-        ),
-        const SizedBox(
-          height: 50,
-        ),
-        Center(
-          child: SizedBox(
-            height: 200,
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: courts.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => InkWell(
-                onTap: () {},
-                child: Container(
-                  width: 220,
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    color: ColorConstants.whiteColor,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: ColorConstants.blackColor.withOpacity(0.2),
-                        blurRadius: 5,
-                        spreadRadius: 0.2,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 80,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                  courts[index]['court_image'],
+      child: Column(
+        children: [
+          Text(
+            StringConstants.playForward,
+            style: TextThemeConstants.headingStyle,
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            StringConstants.playForwardSubTitle,
+            style: TextThemeConstants.subTitleStyle,
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          Center(
+            child: SizedBox(
+              height: 200,
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: courts.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => InkWell(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext dialogContext) {
+                        return AlertDialog(
+                          icon: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: const Icon(Icons.close),
+                          ),
+                          content: const CourtBooking(),
+                        );
+                      },
+                    );
+                  },
+                  child: Container(
+                    width: 220,
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: ColorConstants.whiteColor,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: ColorConstants.blackColor.withOpacity(0.2),
+                          blurRadius: 5,
+                          spreadRadius: 0.2,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: 80,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(
+                                    courts[index]['court_image'],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Text(
-                            courts[index]['court_name'],
-                            style: TextThemeConstants.subHeadingStyle,
-                          ),
-                          Text(
-                            courts[index]['court_address'],
-                            style: TextThemeConstants.bodyTextStyle1,
-                          ),
-                        ],
-                      ),
-                      Expanded(child: Container()),
-                      RichText(
-                        text: TextSpan(
-                          style: TextThemeConstants.bodyTextStyle1,
-                          children: [
-                            const TextSpan(
-                              text: StringConstants.availableFor,
+                            const SizedBox(
+                              height: 15,
                             ),
-                            TextSpan(
-                              text: courts[index]['available_dates'],
-                              style: TextThemeConstants.bodyTextStyle1
-                                  .copyWith(fontWeight: FontWeight.w700),
+                            Text(
+                              courts[index]['court_name'],
+                              style: TextThemeConstants.subHeadingStyle,
+                            ),
+                            Text(
+                              courts[index]['court_address'],
+                              style: TextThemeConstants.bodyTextStyle1,
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                    ],
+                        Expanded(child: Container()),
+                        RichText(
+                          text: TextSpan(
+                            style: TextThemeConstants.bodyTextStyle1,
+                            children: [
+                              const TextSpan(
+                                text: StringConstants.availableFor,
+                              ),
+                              TextSpan(
+                                text: courts[index]['available_dates'],
+                                style: TextThemeConstants.bodyTextStyle1
+                                    .copyWith(fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
           ),
-        ),
-        const SizedBox(
-          height: 29,
-        ),
-        OutlineButton(
-          buttonText: StringConstants.viewAllCourts,
-          borderColor: ColorConstants.blackColor.withOpacity(0.25),
-          textColor: ColorConstants.blackColor,
-        ),
-      ]),
+          const SizedBox(
+            height: 29,
+          ),
+          // OutlineButton(
+          //   buttonText: StringConstants.viewAllCourts,
+          //   borderColor: ColorConstants.blackColor.withOpacity(0.25),
+          //   textColor: ColorConstants.blackColor,
+          // ),
+        ],
+      ),
     );
   }
 }

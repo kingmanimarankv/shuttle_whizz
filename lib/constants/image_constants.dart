@@ -10,5 +10,5 @@ class ImageConstants {
   static const tickImage = "assets/images/tick.png";
   static const qrImage = "assets/images/qr_code.png";
   static const badmintonPlayer1 = "assets/images/badminton_player1.png";
-  static const badmintonGirls = "assets/images/badminton_girls.png";
+  static const pattern = "assets/images/pattern.png";
 }

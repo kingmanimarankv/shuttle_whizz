@@ -35,15 +35,14 @@ class StringConstants {
   static const courtLocation = "Ontario, LM0479";
   static const courtDescriptionTitle = "About Venue";
   static const courtDescription = '''
- 1.Non marking shoes compulsory for badminton
- 2.Non marking shoes compulsory for badminton
- 3.Non marking shoes compulsory for badminton
- 4.Non marking shoes compulsory for badminton
- 5.Non marking shoes compulsory for badminton
- 6.Non marking shoes compulsory for badminton
-
- ''';
-  static const availableDate = "Availabel Dates";
+About Venue
+1. Non Marking Shoes compulsory for Badminton. 
+2. Shoes must be worn after entering the facility.
+3. Sports equipment available on rent: Rackets, Shoes.
+4. Socks are compulsory for rented shoes. Please carry your own.
+5. Barefoot play is strictly prohibited.
+6. A maximum of 4 members per booking per badminton court is admissible. ''';
+  static const availableDate = "Available Dates";
   static const availableSlots = "Available Slots";
   static const bookingDate = "23 January 2023";
   static const bookingTime = "11 AM - 12 AM";
@@ -73,10 +72,10 @@ class StringConstants {
       "Your booking is confirmed. Please\n find the details below";
   static const condition = "Conditions";
   static const conditionDescrption = '''
-1. Non making shoes compulsory for badminton,
-2. Non making shoes compulsory for badminton,
-3. Non making shoes compulsory for badminton,
-4. Non making shoes compulsory for badminton,
-
- ''';
+1. Non Marking Shoes compulsory for Badminton. 
+2. Shoes must be worn after entering the facility.
+3. Sports equipment available on rent: Rackets, Shoes.
+4. Socks are compulsory for rented shoes. Please carry your own.
+5. Barefoot play is strictly prohibited.
+6. A maximum of 4 members per booking per badminton court is admissible.  ''';
 }
