@@ -34,31 +34,28 @@ class StringConstants {
   static const account = "Account";
   static const perMonth = "per month";
   static const buyNow = "BUY NOW";
-  static const loginWelcome ="Welcome Back!";
-  static const requestCredentials ="Please enter your member id \n and password to proceed";
+  static const loginWelcome = "Welcome Back!";
+  static const requestCredentials =
+      "Please enter your member id \n and password to proceed";
   static const loginMenberID = "Member ID (6 digit number)";
-  static const loginPassword ="Password";
-  static const signInWithGoogle ="Sign in with google";
+  static const loginPassword = "Password";
+  static const signInWithGoogle = "Sign in with google";
   static const accountProfile = "Account";
-  static const userName ="John Doe";
-  static const userMembership ="Gold member \nAdvanced";
-  static const upDownmembership = "Up/Downgrade membership";
-  static const updatePlayLevel ="Update play level";
+  static const userName = "John Doe";
+  static const userMembership = "Gold member";
+  static const playerLevel = "Advanced";
+  static const upDownmembership = "Update membership";
+  static const updatePlayLevel = "Update play level";
   static const signOut = "Sign out";
-  static const congratulations ="Congratulations!";
-  static const bookingConfirmation ="Your booking is confirmed. Please\n find the details below";
-  static const condition ="Conditions";
-  static const conditionDescrption ='''
+  static const congratulations = "Congratulations!";
+  static const bookingConfirmation =
+      "Your booking is confirmed. Please\n find the details below";
+  static const condition = "Conditions";
+  static const conditionDescrption = '''
 1.Non making shoes compulsory for badminton,
 2.Non making shoes compulsory for badminton,
 3.Non making shoes compulsory for badminton,
 4.Non making shoes compulsory for badminton,
 
  ''';
-
-
-
-
-
-
 }
