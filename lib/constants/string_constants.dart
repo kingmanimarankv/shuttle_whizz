@@ -33,7 +33,8 @@ class StringConstants {
   static const bookings = "Bookings";
   static const account = "Account";
   static const perMonth = "per month";
-  static const buyNow = "BUY NOW";
+  static const perUsage = "per usage";
+  static const getNow = "GET NOW";
   static const loginWelcome = "Welcome Back!";
   static const requestCredentials =
       "Please enter your member id \n and password to proceed";

@@ -11,30 +11,45 @@ class MembershipSection extends StatelessWidget {
     {
       "member_type": 'Gold',
       "color": ColorConstants.yellowColor,
-      "amount": '\$40',
-      "description_1": "✅ 3 days of play allowed per week",
-      "description_2": "✅ Book courts 4 days before the game day",
+      "amount": '\$250',
+      "per_month_usage": StringConstants.perMonth,
+      "description_1": "✅ 4 sessions per week",
+      "description_2": "✅ Upto 2 hours per session",
+      "description_3": "✅ Book courts 4 days before the game day",
     },
     {
       "member_type": 'Silver',
       "color": ColorConstants.greyColor,
-      "amount": '\$30',
-      "description_1": "✅ 2 days of play allowed per week",
-      "description_2": "✅ Book courts 3 days before the game day",
+      "amount": '\$175',
+      "per_month_usage": StringConstants.perMonth,
+      "description_1": "✅ 2 sessions per week",
+      "description_2": "✅ Upto 2 hours per session",
+      "description_3": "✅ Book courts 3 days before the game day",
     },
     {
       "member_type": 'Bronze',
       "color": ColorConstants.rosyBrownColor,
-      "amount": '\$20',
-      "description_1": "✅ 1 day of play allowed per week",
-      "description_2": "✅ Book courts 2 days before the game day",
+      "amount": '\$100',
+      "per_month_usage": StringConstants.perMonth,
+      "description_1": "✅ 1 session per week",
+      "description_2": "✅ Upto 2 hours per session",
+      "description_3": "✅ Book courts 2 days before the game day",
+    },
+    {
+      "member_type": 'Drop Ins',
+      "color": ColorConstants.greenColor,
+      "amount": '\$7',
+      "per_month_usage": StringConstants.perUsage,
+      "description_1": "✅ Upto 2 hours per session",
+      "description_2": "",
+      "description_3": "",
     },
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 50),
-      color: ColorConstants.aliceBlueColor,
+      color: ColorConstants.whiteColor,
       width: double.infinity,
       child: Column(
         children: [
@@ -88,7 +103,9 @@ class MembershipSection extends StatelessWidget {
                         ),
                         child: Text(
                           membershipDetails[index]['member_type'],
-                          style: TextThemeConstants.card1,
+                          style: TextThemeConstants.subTitleBoldStyle.copyWith(
+                            fontSize: 25,
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -99,10 +116,13 @@ class MembershipSection extends StatelessWidget {
                           children: [
                             Text(
                               membershipDetails[index]["amount"],
-                              style: TextThemeConstants.card2,
+                              style:
+                                  TextThemeConstants.subTitleBoldStyle.copyWith(
+                                fontSize: 50,
+                              ),
                             ),
                             Text(
-                              StringConstants.perMonth,
+                              membershipDetails[index]["per_month_usage"],
                               style: TextThemeConstants.subTitleStyle.copyWith(
                                 fontSize: 12,
                               ),
@@ -176,7 +196,7 @@ class MembershipSection extends StatelessWidget {
                                     style: TextThemeConstants.subTitleStyle
                                         .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 13,
+                                      fontSize: 12,
                                     ),
                                   ),
                                   const SizedBox(height: 15),
@@ -185,12 +205,21 @@ class MembershipSection extends StatelessWidget {
                                     style: TextThemeConstants.subTitleStyle
                                         .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 13,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 15),
+                                  Text(
+                                    membershipDetails[index]["description_3"],
+                                    style: TextThemeConstants.subTitleStyle
+                                        .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12,
                                     ),
                                   ),
                                   Expanded(child: Container()),
                                   const Button(
-                                    buttonText: StringConstants.buyNow,
+                                    buttonText: StringConstants.getNow,
                                   ),
                                 ],
                               ),

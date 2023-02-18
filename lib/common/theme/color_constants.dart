@@ -10,6 +10,7 @@ class ColorConstants {
   static const yellowColor = Color(0xFFFFD700);
   static const greyColor = Color(0xFFC0C0C0);
   static const rosyBrownColor = Color(0xFFBC8F8F);
+  static const greenColor = Color(0xFFABFAB9);
   static const lightSilver = Color(0xFFD8D8D8);
   static const darkSalmon = Color(0xFF9377EE);
   static const gainsboro = Color(0xFFE2DEDE);

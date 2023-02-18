@@ -27,7 +27,8 @@ class PreferenceSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 50),
-          Wrap(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: content.entries
                 .map(
                   (e) => Container(
@@ -36,31 +37,29 @@ class PreferenceSection extends StatelessWidget {
                       vertical: 20,
                     ),
                     width: 150,
-                    child: Expanded(
-                      child: Column(
-                        children: [
-                          const Image(
-                            image: AssetImage(ImageConstants.spadeIcon),
+                    child: Column(
+                      children: [
+                        const Image(
+                          image: AssetImage(ImageConstants.spadeIcon),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          e.key,
+                          style: TextThemeConstants.subTitleStyle.copyWith(
+                            fontWeight: FontWeight.w700,
                           ),
-                          const SizedBox(
-                            height: 10,
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          e.value,
+                          style: TextThemeConstants.bodyTextStyle1.copyWith(
+                            height: 1.3,
                           ),
-                          Text(
-                            e.key,
-                            style: TextThemeConstants.subTitleStyle.copyWith(
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          const SizedBox(height: 6),
-                          Text(
-                            e.value,
-                            style: TextThemeConstants.bodyTextStyle1.copyWith(
-                              height: 1.3,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                     ),
                   ),
                 )
