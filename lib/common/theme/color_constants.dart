@@ -17,4 +17,8 @@ class ColorConstants {
   static const redColor = Color(0xFFFF0000);
   static const darkGray = Color(0xFF1E1E1E);
   static const darkGreen = Color(0xFF34B18F);
+
+  static const darkSalmonColor = Color(0xFF9377EE);
+  static const gray85 = Color(0xFFD9D9D9);
+  static const chelseaCucumber = Color(0xFF54B1AB);
 }
