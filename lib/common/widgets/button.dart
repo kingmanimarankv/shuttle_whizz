@@ -5,10 +5,14 @@ import 'package:shuttle_whizz/common/theme/color_constants.dart';
 class Button extends StatelessWidget {
   const Button({
     required this.buttonText,
+    this.buttonColor=ColorConstants.orangeColor,
+    this.image,
     super.key,
   });
 
   final String buttonText;
+  final Color buttonColor;
+  final String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +22,28 @@ class Button extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         width: 250,
         decoration: BoxDecoration(
-          color: ColorConstants.orangeColor,
+          color: buttonColor,
           borderRadius: BorderRadius.circular(50),
         ),
-        child: Center(
-          child: Text(
-            buttonText,
-            style: GoogleFonts.lato(
-              fontWeight: FontWeight.w600,
-              fontSize: 12,
-            ),
+        
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              (image != null)? Image.asset(image!,width: 17,height: 18,):SizedBox(),
+              SizedBox(width:10),
+              Container(
+                child: Text(
+                  buttonText.toUpperCase(),
+                  style: GoogleFonts.lato(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 12,
+                    color: ColorConstants.violetColor
+                  ),
+                ),
           ),
-        ),
+            ],
+          ),
+        
       ),
     );
   }

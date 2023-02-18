@@ -26,4 +26,8 @@ class TextThemeConstants {
     fontSize: 12,
     fontWeight: FontWeight.w600,
   );
+  static final loginWelcome = GoogleFonts.poppins(
+    fontSize: 30,
+    fontWeight: FontWeight.w900,
+  );
 }

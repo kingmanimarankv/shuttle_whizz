@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shuttle_whizz/screens/pop_ups/account.dart';
+import 'package:shuttle_whizz/screens/pop_ups/booking.dart';
+import 'package:shuttle_whizz/screens/pop_ups/login.dart';
+import 'package:shuttle_whizz/screens/pop_ups/successful_booking.dart';
 import 'package:shuttle_whizz/screens/widgets/nav_bar_section.dart';
 
 import 'widgets/help_section.dart';
@@ -23,6 +27,10 @@ class HomeScreen extends StatelessWidget {
             PreferenceSection(),
             MembershipSection(),
             const HelpSection(),
+            Login(),
+            Account(),
+            Booking(),
+            SuccessfulBooking(),
           ],
         ),
       ),
