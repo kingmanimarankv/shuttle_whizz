@@ -4,6 +4,7 @@ import 'package:shuttle_whizz/constants/image_constants.dart';
 import 'package:shuttle_whizz/constants/string_constants.dart';
 
 import '../../common/theme/text_theme.dart';
+import '../pop_ups/booking_court.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
@@ -40,6 +41,23 @@ class HeroSection extends StatelessWidget {
                   height: 20,
                 ),
                 Button(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext dialogContext) {
+                        return AlertDialog(
+                          icon: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: const Icon(Icons.close),
+                          ),
+                          content: const CourtBooking(),
+                        );
+                      },
+                    );
+                  },
                   buttonText: StringConstants.bookNow.toUpperCase(),
                 ),
               ],

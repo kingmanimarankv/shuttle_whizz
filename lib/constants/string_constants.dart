@@ -26,7 +26,26 @@ class StringConstants {
   static const playForwardSubTitle =
       "Book your slots in the best class courts from the club now";
   static const availableFor = "Available For ";
-  static const viewAllCourts = "View All Courts";
+  static const discountTitle = "Up to 50% Discount";
+  static const discountSubTitle = "on your Gold Membership";
+  static const membershipCode = "USE CODE:BURLIGTON45623";
+  static const viewAllCourts = "View all courts";
+  //Court-booking_details
+  static const courtName = "Court-1";
+  static const courtLocation = "Ontario, LM0479";
+  static const courtDescriptionTitle = "About Venue";
+  static const courtDescription = '''
+About Venue
+1. Non Marking Shoes compulsory for Badminton. 
+2. Shoes must be worn after entering the facility.
+3. Sports equipment available on rent: Rackets, Shoes.
+4. Socks are compulsory for rented shoes. Please carry your own.
+5. Barefoot play is strictly prohibited.
+6. A maximum of 4 members per booking per badminton court is admissible. ''';
+  static const availableDate = "Available Dates";
+  static const availableSlots = "Available Slots";
+  static const bookingDate = "23 January 2023";
+  static const bookingTime = "11 AM - 12 AM";
   static const shuttleWhizzClub = "Shuttle Whizz Badminton Club";
   static const clubAddress =
       "3042 Tim Dobbie Dr, Burlington, ON, Canada, Ontario";
@@ -35,4 +54,28 @@ class StringConstants {
   static const perMonth = "per month";
   static const perUsage = "per usage";
   static const getNow = "GET NOW";
+  static const loginWelcome = "Welcome Back!";
+  static const requestCredentials =
+      "Please enter your member id \nand password to proceed";
+  static const loginMenberID = "Member ID (6 digit number)";
+  static const loginPassword = "Password";
+  static const signInWithGoogle = "Sign in with google";
+  static const accountProfile = "Account";
+  static const userName = "John Doe";
+  static const userMembership = "Gold member";
+  static const playerLevel = "Advanced";
+  static const upDownmembership = "Update membership";
+  static const updatePlayLevel = "Update play level";
+  static const signOut = "Sign out";
+  static const congratulations = "Congratulations!";
+  static const bookingConfirmation =
+      "Your booking is confirmed. Please\n find the details below";
+  static const condition = "Conditions";
+  static const conditionDescrption = '''
+1. Non Marking Shoes compulsory for Badminton. 
+2. Shoes must be worn after entering the facility.
+3. Sports equipment available on rent: Rackets, Shoes.
+4. Socks are compulsory for rented shoes. Please carry your own.
+5. Barefoot play is strictly prohibited.
+6. A maximum of 4 members per booking per badminton court is admissible.  ''';
 }
