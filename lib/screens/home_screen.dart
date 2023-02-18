@@ -30,6 +30,7 @@ class HomeScreen extends StatelessWidget {
             const SliderSection(),
             MembershipSection(),
             const HelpSection(),
+            SuccessfulBooking(),
             Container(
               width: double.infinity,
               color: ColorConstants.violetColor,
@@ -53,7 +54,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SuccessfulBooking(),
           ],
         ),
       ),

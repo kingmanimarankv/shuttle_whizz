@@ -37,7 +37,7 @@ class StringConstants {
   static const getNow = "GET NOW";
   static const loginWelcome = "Welcome Back!";
   static const requestCredentials =
-      "Please enter your member id \n and password to proceed";
+      "Please enter your member id \nand password to proceed";
   static const loginMenberID = "Member ID (6 digit number)";
   static const loginPassword = "Password";
   static const signInWithGoogle = "Sign in with google";
@@ -53,10 +53,10 @@ class StringConstants {
       "Your booking is confirmed. Please\n find the details below";
   static const condition = "Conditions";
   static const conditionDescrption = '''
-1.Non making shoes compulsory for badminton,
-2.Non making shoes compulsory for badminton,
-3.Non making shoes compulsory for badminton,
-4.Non making shoes compulsory for badminton,
+1. Non making shoes compulsory for badminton,
+2. Non making shoes compulsory for badminton,
+3. Non making shoes compulsory for badminton,
+4. Non making shoes compulsory for badminton,
 
  ''';
 }
