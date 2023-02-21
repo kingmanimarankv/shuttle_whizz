@@ -8,6 +8,7 @@ import 'package:shuttle_whizz/screens/widgets/nav_bar_section.dart';
 import 'package:shuttle_whizz/screens/widgets/slider_section.dart';
 import 'package:shuttle_whizz/screens/pop_ups/booking_court.dart';
 
+import 'pop_ups/membership_registration.dart';
 import 'widgets/help_section.dart';
 import 'widgets/hero_section.dart';
 import 'widgets/play_it_forward_section.dart';
@@ -25,13 +26,14 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const NavBarSection(),
-            const HeroSection(),
-            PlayItForwardSection(),
-            PreferenceSection(),
-            const SliderSection(),
-            MembershipSection(),
-            const HelpSection(),
+            // const NavBarSection(),
+            // const HeroSection(),
+            // PlayItForwardSection(),
+            // PreferenceSection(),
+            // const SliderSection(),
+            // MembershipSection(),
+            // const HelpSection(),
+             MembershipRegistration(),
             Container(
               width: double.infinity,
               color: ColorConstants.violetColor,
