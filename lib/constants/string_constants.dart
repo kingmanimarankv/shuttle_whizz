@@ -78,4 +78,6 @@ About Venue
 4. Socks are compulsory for rented shoes. Please carry your own.
 5. Barefoot play is strictly prohibited.
 6. A maximum of 4 members per booking per badminton court is admissible.  ''';
+static const membershipRegistration  = "Membership Registration";
+static const membershipRegistrationSubtitle ="For any additional information/concerns\n please contact info.shuttlewhizz@gmail.com";
 }
